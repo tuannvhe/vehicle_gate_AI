@@ -1,0 +1,27 @@
+# Môi trường Python
+venv*/
+.venv/
+__pycache__/
+*.pyc
+
+# Cấu hình cục bộ (dùng .env.example làm mẫu)
+.env
+
+# Cache tải model từ HuggingFace
+.cache/
+
+# Trọng số YOLO gốc không dùng tới (model thật nằm trong models/)
+/yolov8n.pt
+
+# Ảnh thử nghiệm có biển số thật
+/test*.jpg
+
+# File sao lưu
+*.bak
+
+# Kết quả huấn luyện / dữ liệu ảnh
+runs/
+training/datasets/
+
+# Nhãn đánh giá chứa biển số thật - không đưa lên repo public
+training/eval/*.json

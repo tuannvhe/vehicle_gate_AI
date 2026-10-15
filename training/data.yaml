@@ -1,0 +1,46 @@
+# Cấu hình dataset cho việc fine-tune character_detector.pt.
+# QUAN TRỌNG: thứ tự "names" phải giữ ĐÚNG NGUYÊN như model gốc (in ra bằng
+# `YOLO('models/character_detector.pt').names`) - đây là fine-tune tiếp tục
+# từ weight cũ (transfer learning), không phải train từ đầu, nên nếu đổi thứ
+# tự/số lượng class, các lớp đã học trước đó sẽ bị gán nhầm nhãn.
+#
+# path: thư mục gốc chứa images/ và labels/ (tuyệt đối hoặc tương đối so với
+# file data.yaml này).
+path: dataset
+train: images/train
+val: images/val
+
+nc: 32
+names:
+  0: '0'
+  1: '1'
+  2: '2'
+  3: '3'
+  4: '4'
+  5: '5'
+  6: '6'
+  7: '7'
+  8: '8'
+  9: '9'
+  10: 'A'
+  11: 'B'
+  12: 'C'
+  13: 'D'
+  14: 'E'
+  15: 'F'
+  16: 'G'
+  17: 'H'
+  18: 'K'
+  19: 'L'
+  20: 'M'
+  21: 'N'
+  22: 'P'
+  23: 'R'
+  24: 'S'
+  25: 'T'
+  26: 'U'
+  27: 'V'
+  28: 'X'
+  29: 'Y'
+  30: 'Z'
+  31: 'license plates'

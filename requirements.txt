@@ -1,0 +1,33 @@
+# Core
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+python-dotenv==1.0.1
+
+# AI/ML
+ultralytics==8.2.100
+opencv-python==4.9.0.80
+opencv-python-headless==4.9.0.80
+numpy==1.24.3
+pandas==2.1.4
+scipy==1.11.4
+
+# OCR - đã thay EasyOCR bằng model YOLO character_detector.pt (xem
+# plate_ocr.py) - không còn cần easyocr nữa, để lại comment này thay vì xóa
+# hẳn để nếu cần rollback về EasyOCR (plate_ocr_easyocr_legacy.py.bak) thì
+# biết cần cài lại gói nào: easyocr==1.7.1
+
+# OCR đọc biển CHÍNH (src/plate_reader.py) - PaddleOCR text recognition,
+# model en_PP-OCRv5_mobile_rec để sẵn trong models/ocr_rec (chạy offline).
+paddlepaddle==3.3.1
+paddleocr==3.7.0
+
+# Image Processing
+Pillow==10.3.0
+scikit-image==0.22.0
+
+# Utilities
+requests==2.31.0
+loguru==0.7.2
+pydantic==2.6.4
+pydantic-settings==2.2.1
